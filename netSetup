@@ -1,0 +1,19 @@
+#!/bin/bash
+dialogCmd=(dialog --separate-output --checklist "Select options:" 15 50 16)
+services=(1 "DHCP (DHCPD)" off
+         2 "DNS (BIND)" off
+         3 "LDAP (OpenLDAP)" off
+         4 "Kerberos (MIT Kerberos)" off
+         5 "NFS" off
+         6 "RADIUS (FreeRADIUS)" off
+        )
+services=$("${dialogCmd[@]}" "${services[@]}" 2>&1 >/dev/tty)
+clear
+for service in $services
+do
+    case $service in
+        1)
+            echo "DHCP"
+            ;;
+    esac
+done
