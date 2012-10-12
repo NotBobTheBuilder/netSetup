@@ -1,0 +1,10 @@
+include(../Services/dhcpd)
+_authoritative()
+_defaultLeaseTime(600)
+_defaultLeaseTime(7200)
+_subnet(10.20.40.0, 255.255.255.0, 
+    _range(10.20.40.10, 10.20.40.20)
+    _nameServers(10.20.40.1, 10.20.40.2)
+    _domainName(example.network)
+    _routers(10.20.40.11)
+    _broadcast(10.20.43.255))
