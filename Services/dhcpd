@@ -1,0 +1,12 @@
+define(`_authoritative', `authoritative;')
+define(`_defaultLeaseTime', `default-lease-time $1;')
+define(`_maxLeaseTime', `max-lease-time $1;')
+define(`_server_identifier', `server-identifier $1;') 
+define(`_subnet', `subnet $1 netmask $2 {'
+    $3
+`}')
+define(`_range', `range $1 $2;')
+define(`_nameServers', `option name-servers $1 $2;')
+define(`_domainName', `option domain-name "$1;"')
+define(`_routers', `option routers $1;')
+define(`_broadcast', `option broadcast-address $1;')
